@@ -1,0 +1,12 @@
+<div role="template-container">
+	<li class="shadow" data-screen_name="{{if user.screen_name}}${user.screen_name}{{else}}${from_user}{{/if}}">
+		<div class="figure clearfix">
+			<a class="img" href="http://twitter.com/{{if user.screen_name}}${user.screen_name}{{else}}${from_user}{{/if}}"><img src="{{if user.profile_image_url}}${user.profile_image_url}{{else}}${profile_image_url}{{/if}}" alt="{{if user.screen_name}}${user.screen_name}{{else}}${from_user_name}{{/if}}"></a>
+			<div class="figcaption">
+				<p><a href="http://twitter.com/{{if user.screen_name}}${user.screen_name}{{else}}${from_user}{{/if}}">@{{if user.screen_name}}${user.screen_name}{{else}}${from_user}{{/if}}</a> <span>{{if user.name}}${user.name}{{else}}${from_user_name}{{/if}}</span></p>
+			</div>
+		</div>
+		<p class="tweet">{{html text}}</p>
+		<div class="tooltip"><div class="arrow"></div>{{if user.description}}${user.description}{{/if}}</div>
+	</li>
+</div>

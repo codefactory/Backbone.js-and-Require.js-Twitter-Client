@@ -1,0 +1,64 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Backbone.js and Require.js Twitter Client</title>
+	<meta name="description" content="Backbone.js + Require.js Twitter Client application">
+	<meta name="author" content="Youngguk Kim">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.textshadow.css">
+	<!-- end CSS-->
+
+	<script src="js/libs/modernizr-2.0.6.min.js"></script>
+	<script src="js/login-check.js"></script>
+	<script data-main="js/main" src="js/libs/require/require.js"></script>
+</head>
+
+<body>
+	
+	<div id="container">
+		
+		<header id="header">
+			<h1>Backbone.js + Require.js Twitter Client example</h1>
+		</header>
+		
+		<section id="content" class="shadow">
+			
+			<div id="login_notice">
+				<a href="API/api.php?mode=login_request&callback_url=http://codefactory.kr/examples/backbone-twitter-client"><button type="button" id="login_btn">트위터 로그인</button></a>
+			</div>
+			
+			<div id="timeline">
+				<nav class="clearfix">
+					<form id="search_form">
+						<fieldset>
+							<input type="search" name="search_txt" id="search_txt" placeholder="트위터 검색">
+							<input type="submit" value="검색" id="submit_btn">
+						</fieldset>
+					</form>
+					
+					<section id="user">
+						<h3><span class="screen_name"></span>님 안녕하세요</h3>
+						<button type="button" id="view_home_timeline">홈 타임라인 보기</button>
+						<button type="button" id="logout">로그아웃</button>
+					</section>
+				</nav>
+				
+				<ul id="result" class="clearfix"></ul>
+			</div>
+			
+		</section>
+		
+	</div>
+  
+</body>
+</html>
